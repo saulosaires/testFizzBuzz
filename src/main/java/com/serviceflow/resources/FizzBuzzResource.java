@@ -23,9 +23,9 @@ import com.serviceflow.util.Utils;
 @Named
 public class FizzBuzzResource {
 
-	private static final String FIZZ = "Fizz";
-	private static final String BUZZ = "Buzz";
-	private static final String INVALID_NUMBER = "This number is invalid: A valid number should be greater then Zero";
+	public static final String FIZZ = "Fizz";
+	public static final String BUZZ = "Buzz";
+	public static final String INVALID_NUMBER = "This number is invalid: A valid number should be greater then Zero";
 
 	private IFizzBuzzService fizzBuzzService;
 
