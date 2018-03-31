@@ -7,7 +7,7 @@ import org.glassfish.jersey.test.JerseyTest;
 
 import org.junit.Test;
 
-import com.serviceflow.resources.MyResource;
+import com.serviceflow.resources.FizzBuzzResource;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,7 +15,7 @@ public class MyResourceTest extends JerseyTest {
 
     @Override
     protected Application configure() {
-        return new ResourceConfig(MyResource.class);
+        return new ResourceConfig(FizzBuzzResource.class);
     }
 
     /**

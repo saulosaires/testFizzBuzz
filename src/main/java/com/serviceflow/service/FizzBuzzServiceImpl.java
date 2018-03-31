@@ -1,7 +1,5 @@
 package com.serviceflow.service;
 
-
-
 public class FizzBuzzServiceImpl implements IFizzBuzzService {
 
 	 private int FIZZ_DIVISOR=3;
