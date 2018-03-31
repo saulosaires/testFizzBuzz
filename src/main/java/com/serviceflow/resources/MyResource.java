@@ -4,6 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import com.serviceflow.service.FizzBuzzServiceImpl;
@@ -31,7 +32,7 @@ public class MyResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String getfizzBuzzNumber(@PathParam(value = "number") Integer number) {
+    public String getfizzBuzzNumber(@QueryParam(value = "number") Integer number) {
         return "Hello, Heroku! "+number;
     }
 }
