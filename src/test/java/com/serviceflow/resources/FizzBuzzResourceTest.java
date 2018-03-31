@@ -96,13 +96,21 @@ public class FizzBuzzResourceTest extends JerseyTest {
          Response response2 = target().queryParam(NUMBER, num2).path(PATH).request().get(Response.class);
          Response response3 = target().queryParam(NUMBER, num3).path(PATH).request().get(Response.class);
          
-         String fizz_3 =response1.readEntity(String.class);
-         String fizz_6 =response2.readEntity(String.class);
-         String fizz_9 =response3.readEntity(String.class);
+         String num_1 =response1.readEntity(String.class);
+         String num_2 =response2.readEntity(String.class);
+         String num_3 =response3.readEntity(String.class);
          
-        assertEquals(FizzBuzzResource.INVALID_NUMBER, fizz_3);
-        assertEquals(FizzBuzzResource.INVALID_NUMBER, fizz_6);
-        assertEquals(FizzBuzzResource.INVALID_NUMBER, fizz_9);
+         int status_1=response1.getStatus();
+         int status_2=response2.getStatus();
+         int status_3=response3.getStatus();
+         
+        assertEquals(Response.Status.BAD_REQUEST.getStatusCode(),status_1);
+        assertEquals(Response.Status.BAD_REQUEST.getStatusCode(),status_2);
+        assertEquals(Response.Status.BAD_REQUEST.getStatusCode(),status_3);       
+        
+        assertEquals(FizzBuzzResource.INVALID_NUMBER, num_1);
+        assertEquals(FizzBuzzResource.INVALID_NUMBER, num_2);
+        assertEquals(FizzBuzzResource.INVALID_NUMBER, num_3);
         
         
     }
