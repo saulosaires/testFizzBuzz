@@ -27,38 +27,51 @@
 
 	<dependencies>
 
+                <dependency>
+                    <groupId>org.glassfish.jersey.containers</groupId>
+                    <artifactId>jersey-container-servlet</artifactId>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>javax.ws.rs</groupId>
+                    <artifactId>javax.ws.rs-api</artifactId>
+                    <scope>compile</scope>
+                    <version>2.1</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.jersey.containers</groupId>
+                    <artifactId>jersey-container-servlet-core</artifactId>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.hk2.external</groupId>
+                    <artifactId>javax.inject</artifactId>
+                    <scope>provided</scope>
+                    <version>2.5.0-b61</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.jersey.core</groupId>
+                    <artifactId>jersey-server</artifactId>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.jersey.ext.cdi</groupId>
+                    <artifactId>jersey-cdi1x</artifactId>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.jersey.ext.cdi</groupId>
+                    <artifactId>jersey-cdi1x-servlet</artifactId>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.weld.servlet</groupId>
+                    <artifactId>weld-servlet</artifactId>
+                    <version>2.4.7.Final</version>
+                </dependency>
 
-		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jersey.inject</groupId>
-			<artifactId>jersey-hk2</artifactId>
-		</dependency>
-
-		<!-- uncomment this to get JSON support <dependency> <groupId>org.glassfish.jersey.media</groupId> 
-			<artifactId>jersey-media-json-binding</artifactId> </dependency> -->
-
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-servlet</artifactId>
-			<version>${jetty.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-webapp</artifactId>
-			<version>${jetty.version}</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
-			<artifactId>jersey-test-framework-provider-bundle</artifactId>
-			<type>pom</type>
-			<scope>test</scope>
-		</dependency>
+ 
+		
 	</dependencies>
 
 	<build>
